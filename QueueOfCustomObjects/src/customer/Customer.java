@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author nicomp
  *
  */
-public class Customer implements Comparable {
+public class Customer implements Comparable<Object> {
 	private ArrayList<String> items;
 	private int loyaltyID;
 	private int VIPLevel;		// How important is this customer? 0 = not, 100 = most
@@ -44,5 +44,12 @@ public class Customer implements Comparable {
 		}
 //		System.out.println("Returning " + result);
 		return result;
+	}
+	/**
+	 * Generate a printable representation of the object.
+	 * It would be nice to include the list of items being purchased.
+	 */
+	public String toString() {
+		return loyaltyID + ": " + VIPLevel;
 	}
 }
