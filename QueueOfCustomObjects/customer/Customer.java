@@ -1,3 +1,8 @@
+/****************************************
+ * Bill Nicholson
+ * nicholdw@ucmail.uc.edu
+ * Example of a priority queue
+ ***************************************/
 package customer;
 
 import java.util.ArrayList;
