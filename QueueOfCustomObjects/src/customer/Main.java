@@ -14,17 +14,21 @@ public class Main {
 		queue.add(new Customer(11111, 1));
 		queue.add(new Customer(11112, 98));
 		queue.add(new Customer(22233, 2));
+		System.out.println("There are " + queue.size() + " customers in the queue");
 
-		// Iterate through the customers in the queue in physical order. Not prioritized!
+		// Iterate through the customers in the queue in priority order. The customers are not removed from the queue
 		for (Customer c: queue) {
 			System.out.println("Loyalty ID = " + c.getLoyaltyID() + ", VIP Level = " + c.getVIPLevel());
 		}
-		// Iterate through the customers in the queue in physical order. Not prioritized!
+		System.out.println("There are " + queue.size() + " customers remaining in the queue");
+		// Iterate through the customers in the queue in priority order AND remove them from the queue.
 		try {
 			while (true) {
 				Customer c = queue.poll();	// The next person in line
 				System.out.println("Loyalty ID = " + c.getLoyaltyID() + ", VIP Level = " + c.getVIPLevel());
 			}
 		} catch (Exception ex) {}	// Eat the exception
+		
+		System.out.println("There are " + queue.size() + " customers remaining in the queue");
 	}
 }
